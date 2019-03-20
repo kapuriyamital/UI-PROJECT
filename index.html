@@ -2,89 +2,89 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMIKSET</title>
+    <title>AMIKSET_bot</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container-fluid menu">
-        <button class="openbtn">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-    <div class="container-fluid" id="class_1" >
-    </div>
-    <div class="container-fluid" id="class_2">
-    </div>
-    <div class="container-fluid" id="class_3">
-    </div>
-    <div class="container-fluid" id="class_4">
-    </div>
-    <div class="container-fluid" id="class_5">
-    </div>
-    <div class="container-fluid" id="class_6">
-    </div>
-
-    <div class="icon-bar" id="jumbomenu" >
-        <ul>
-            <li>
-                <a href="#class_1" >
+<nav class="navbar navbar-expand-md menu">
+    <a class="navbar-brand logo" href="#">AMIKSET</a>
+    <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse icon-menu" id="collapsibleNavbar">
+        <ul class="nav  ml-auto">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_1" >
                     <div class="pagemenu_nom">01</div>
                     <div class="pagemenu_title">ETUSIVU</div>
                 </a>
             </li>
-            <li>
-                <a href="#class_2">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_2">
                     <div class="pagemenu_nom">02</div>
                     <div class="pagemenu_title">Amis hyvin kaikki hyvin</div>
                 </a>
             </li>
-            <li>
-                <a href="#class_3">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_3">
                     <div class="pagemenu_nom">03</div>
                     <div class="pagemenu_title">Infograafit</div>
                 </a>
             </li>
-            <li>
-                <a href="#class_4">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_4">
                     <div class="pagemenu_nom">04</div>
                     <div class="pagemenu_title">Toimenpiteet</div>
                 </a>
             </li>
-            <li>
-                <a href="#class_5">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_5">
                     <div class="pagemenu_nom">05</div>
                     <div class="pagemenu_title">Ryhmäilmiö</div>
                 </a>
             </li>
-            <li>
-                <a href="#class_6">
+            <li class="nav-item text-center bg-light">
+                <a class="nav-link text-black-50" href="#class_6">
                     <div class="pagemenu_nom">06</div>
                     <div class="pagemenu_title">Amis-hanke</div>
                 </a>
             </li>
         </ul>
     </div>
+</nav>
 
+<div class="page" id="page-scroll">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".openbtn").click(function() {
-                $("#jumbomenu").toggle("slow");
-                $('#jumbomenu').click(function () {
-                    $("#jumbomenu").hide("slow");
-                });
-            });
-        });
-    </script>
+    <div class="container-fluid page-section" id="class_1" >
+    </div>
+    <div class="container-fluid page-section" id="class_2">
+    </div>
+    <div class="container-fluid page-section" id="class_3">
+    </div>
+    <div class="container-fluid page-section" id="class_4">
+    </div>
+    <div class="container-fluid page-section" id="class_5">
+    </div>
+    <div class="container-fluid page-section" id="class_6">
+    </div>
+
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Fastclick JavaScript -->
+<script type='application/javascript' src='js/jquery.betterScroll.js'></script>
+<script>
+    $(document).ready(function () {
+        $('#page-scroll').betterScroll();
+    });
+</script>
 
 </body>
 
