@@ -1,3 +1,11 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: transparent;
+}
+.page{
+    height: auto;
+}
 .menu{
     overflow: hidden;
     background-color: #20bec6;
@@ -9,51 +17,52 @@
 }
 #class_1{
     clear: both;
-    background : url('../image/background1.jpg')no-repeat center ;
+   /* background : url('../image/background1.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
+    background-color: #f28137;
     position: relative;
     height: 100vh;
 }
 #class_2{
-    background : url('../image/background2.jpg')no-repeat center ;
+    /*background : url('../image/background2.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
     position: relative;
     height: 100vh;
     background-color: #5fb2e0;
 }
 #class_3 {
-    background : url('../image/background3.jpg')no-repeat center ;
+    /*background : url('../image/background3.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
     position: relative;
     height: 100vh;
     background-color: #144058;;
 }
 #class_4{
-    background : url('../image/background4.jpg')no-repeat center ;
+   /* background : url('../image/background4.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
     position: relative;
     height: 100vh;
     background-color:#bbb2af;
 }
 #class_5{
-    background : url('../image/background5.jpg')no-repeat center ;
+    /*background : url('../image/background5.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
     position: relative;
     height: 100vh;
     background-color: #4c4f50;
 }
 #class_6{
-    background : url('../image/background6.jpg')no-repeat center ;
+    /*background : url('../image/background6.jpg')no-repeat center ;
     padding: 0px;
-    background-size: cover;
+    background-size: cover;*/
     position: relative;
     height: 100vh;
-    background-color:#bbb2af;
+    background-color:#7cc1b9;;
 }
 .icon-menu{
     width: 100px;
@@ -92,15 +101,15 @@
 }
 html {
     scroll-behavior: smooth;
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
 .navbar-toggler, .logo {
     display: none;
 }
-
-
+.active a .pagemenu_nom{
+    color:yellow;
+    border-bottom:3px solid #F38A8A;
+}
 @media screen and (max-width: 767px){
     .menu {
         height: 65px;
