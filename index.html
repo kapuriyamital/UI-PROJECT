@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1{
+            padding:25px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md menu">
@@ -16,38 +21,38 @@
     </button>
     <div class="collapse navbar-collapse icon-menu" id="collapsibleNavbar">
         <ul class="nav ml-auto">
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_1" >
+            <li class="nav-item text-center bg-light" onclick="movetodiv(-1)">
+                <a class="nav-link text-black-50" href="javascript:void(0)" >
                     <div class="pagemenu_nom">01</div>
                     <div class="pagemenu_title">title-1</div>
                 </a>
             </li>
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_2">
+            <li class="nav-item text-center bg-light" onclick="movetodiv(0)">
+                <a class="nav-link text-black-50" href="javascript:void(0)">
                     <div class="pagemenu_nom">02</div>
                     <div class="pagemenu_title">title-2</div>
                 </a>
             </li>
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_3">
+            <li class="nav-item text-center bg-light" onclick="movetodiv(1)">
+                <a class="nav-link text-black-50" href="javascript:void(0)">
                     <div class="pagemenu_nom">03</div>
                     <div class="pagemenu_title">title-3</div>
                 </a>
             </li>
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_4">
+            <li class="nav-item text-center bg-light" onclick="movetodiv(2)">
+                <a class="nav-link text-black-50" href="javascript:void(0)">
                     <div class="pagemenu_nom">04</div>
                     <div class="pagemenu_title">title-4</div>
                 </a>
             </li>
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_5">
+            <li class="nav-item text-center bg-light" onclick="movetodiv(3)">
+                <a class="nav-link text-black-50" href="javascript:void(0)">
                     <div class="pagemenu_nom">05</div>
                     <div class="pagemenu_title">title-5</div>
                 </a>
             </li>
-            <li class="nav-item text-center bg-light">
-                <a class="nav-link text-black-50" href="#class_6">
+            <li class="nav-item text-center bg-light" onclick="movetodiv(4)">
+                <a class="nav-link text-black-50" href="javascript:void(0)">
                     <div class="pagemenu_nom">06</div>
                     <div class="pagemenu_title">title-6</div>
                 </a>
@@ -59,16 +64,28 @@
     <div class="page" id="page-scroll">
 
         <div class="container-fluid page-section" id="class_1" >
+            <h1>1</h1>
+            <br><h1>index -1</h1>
         </div>
         <div class="container-fluid page-section" id="class_2">
+            <h1>2</h1>
+            <br><h1>index 0</h1>
         </div>
         <div class="container-fluid page-section" id="class_3">
+            <h1>3</h1>
+            <br><h1>index 1</h1>
         </div>
         <div class="container-fluid page-section" id="class_4">
+            <h1>4</h1>
+            <br><h1>index 2</h1>
         </div>
         <div class="container-fluid page-section" id="class_5">
+            <h1>5</h1>
+            <br><h1>index 3</h1>
         </div>
         <div class="container-fluid page-section" id="class_6">
+            <h1>6</h1>
+            <br><h1>index 4</h1>
         </div>
    </div>
 <!-- jQuery library -->
@@ -84,6 +101,7 @@
      $(document).ready(function () {
          $('#page-scroll').betterScroll();
      });
+
 </script>
 
 </body>

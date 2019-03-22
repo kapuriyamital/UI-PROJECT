@@ -1,3 +1,37 @@
+//var sectionIndex = -1;
+var slide = 0;
+function movetodiv(curIndex) {
+    var self = $(this);
+
+        if (slide > curIndex) {
+            for (var i = curIndex; i <= slide; i++) {
+                self.betterScrollUp();
+            }
+        } else {
+            for (var i = slide; i <= curIndex; i++) {
+                self.betterScrollDown();
+            }
+        }
+
+    /*    var self = $(this);
+    console.log("==========");
+    console.log(sectionIndex);
+    console.log(curIndex);
+    if(curIndex != sectionIndex) {
+        if(curIndex > sectionIndex) {
+            self.betterScrollTransform(curIndex + 1);
+        } else {
+            self.betterScrollTransform(curIndex - 1);
+            console.log("inside"+curIndex);
+            console.log("section"+curIndex);
+        }
+        setTimeout(function() {
+            //console.log("asdasdasdasda");
+            //sectionIndex = curIndex;
+        }, 2000);
+    }*/
+}
+
 $(document).ready(function () {
 
 	// GLOBAL FUNCTIONS
@@ -209,7 +243,7 @@ $(document).ready(function () {
             return navigator.userAgent.match(/iPhone|iPad|iPod/i);
         }
 
-        $.fn.betterScrollTransform = function (index, responsiveResize) {
+        $.fn.betterScrollTransform = function (index, responsiveResize, slideIncDcr) {
             var sectionPosition = $(pageScrollParams.sectionSelector + '[data-section-index="' + index + '"]').offset().top,
                 position = -(viewport().height * index);
 
@@ -219,6 +253,12 @@ $(document).ready(function () {
 
             if (viewport().width > pageScrollParams.responsivePoint || responsiveResize) {
                 if (supportTransition()) {
+                    if(slideIncDcr) {
+                        slide++;
+                    } else {
+                        slide--;
+                    }
+                    console.log(slide);
                     $(pageScrollParams.sectionWrapper).css({
                         "-webkit-transform": "translate3d(0, " + position + "px, 0)",
                         "-webkit-transition": "all " + pageScrollParams.animationDuration + "ms ease",
@@ -248,7 +288,7 @@ $(document).ready(function () {
                 currentSection.removeClass('active');
                 nextSection.addClass('active');
 
-                self.betterScrollTransform(sectionIndex + 1);
+                self.betterScrollTransform(sectionIndex + 1, '', true);
             } else {
                 return;
             }
@@ -265,7 +305,7 @@ $(document).ready(function () {
                 currentSection.removeClass('active');
                 nextSection.addClass('active');
 
-                self.betterScrollTransform(sectionIndex - 1);
+                self.betterScrollTransform(sectionIndex - 1, '', false);
             } else {
                 return;
             }
