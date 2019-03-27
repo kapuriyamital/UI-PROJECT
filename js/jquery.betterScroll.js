@@ -1,5 +1,6 @@
 //var sectionIndex = -1;
 var slide = 0;
+var curIndex = 0;
 function movetodiv(curIndex) {
     var self = $(this);
 
@@ -7,10 +8,12 @@ function movetodiv(curIndex) {
             for (var i = curIndex; i <= slide; i++) {
                 self.betterScrollUp();
             }
-        } else {
-            for (var i = slide; i <= curIndex; i++) {
+        } else if(slide < curIndex){
+            for (var i = slide; i < curIndex; i++) {
                 self.betterScrollDown();
             }
+        }else{
+            self;
         }
 
     /*    var self = $(this);
@@ -147,10 +150,10 @@ $(document).ready(function () {
                 scrollDownSelector: '.js-slide-down',
                 scrollUpSelector: '.js-slide-up',
                 scrollToFirst: '.js-slide-first',
-                responsivePoint: 768,
+                responsivePoint: 250,
                 animationDuration: 1000
             };
-        
+    // start mobile scroll function//
 
         function setSections() {
             var section = $(pageScrollParams.sectionSelector),
@@ -184,7 +187,7 @@ $(document).ready(function () {
                 i++;
             });
         };
-
+    //close function//
         setSections();
 
         function resizeSections() {
@@ -207,18 +210,18 @@ $(document).ready(function () {
                     if (childBlockHeight > sectionHeight) {
                         sectionHeight = childBlockHeight;
                     }
-
                 }
-
                 self.attr('style', 'height: ' + sectionHeight + 'px !important');
             });
 
             if (viewport().width > pageScrollParams.responsivePoint) {
+                console.log(viewport().width);
                 self.bindMouseWheel();
                 self.bindSwipe();
                 self.betterScrollTransform(sectionIndex);
                 $('html').removeClass('scroll-on').addClass('scroll-off');
             } else {
+                console.log(viewport().width);
                 self.unbindMouseWheel();
                 self.unbindSwipe();
                 self.betterScrollTransform(0, true);
