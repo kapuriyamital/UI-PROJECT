@@ -5,7 +5,7 @@ function movetodiv(curIndex) {
     var self = $(this);
 
         if (slide > curIndex) {
-            for (var i = curIndex; i <= slide; i++) {
+            for (var i = slide; i > curIndex ; i--) {
                 self.betterScrollUp();
             }
         } else if(slide < curIndex){
